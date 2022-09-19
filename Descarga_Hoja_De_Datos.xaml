@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Descarga_de_hoja_de_datos" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1123,2907" sap2010:WorkflowViewState.IdRef="Descarga_de_hoja_de_datos_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Descarga_de_hoja_de_datos" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1144,3000" sap2010:WorkflowViewState.IdRef="Descarga_de_hoja_de_datos_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="74">
       <x:String>System.Activities</x:String>
@@ -78,16 +78,11 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="En este secuencia se descargará la hoja de datos ubicada en drive de google" DisplayName="Descarga_de_hoja_de_datos" sap:VirtualizedContainerService.HintSize="915,2842" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="En este secuencia se descargará la hoja de datos ubicada en drive de google" DisplayName="Descarga_de_hoja_de_datos" sap:VirtualizedContainerService.HintSize="911.2,2935.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="URLDescarga">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://drive.google.com/drive/u/3/folders/1shJ6qV-pjCpCZVN3UyIhxG2wc43VTxtk</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://drive.google.com/drive/u/3/folders/1shJ6qV-pjCpCZVN3UyIhxG2wc43VTxtk" Name="URLDescarga" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -95,13 +90,13 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="se abre el navegador con la url designada para comenzar las acciones para hacer la descarga&#xD;&#xA;" AutomaticallyDownloadWebDriver="False" BrowserType="Chrome" DisplayName="Abrir navegador en URL designada" sap:VirtualizedContainerService.HintSize="873,2719" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[URLDescarga]">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="se abre el navegador con la url designada para comenzar las acciones para hacer la descarga&#xA;" AutomaticallyDownloadWebDriver="False" BrowserType="Chrome" DisplayName="Abrir navegador en URL designada" sap:VirtualizedContainerService.HintSize="869.6,2811.2" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[URLDescarga]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Descargar hoja de datos" sap:VirtualizedContainerService.HintSize="839,2576" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Descargar hoja de datos" sap:VirtualizedContainerService.HintSize="836,2664.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="DownloadSuccess" />
             </Sequence.Variables>
@@ -110,8 +105,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximizar ventana" sap:VirtualizedContainerService.HintSize="797,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="se hace clic derecho en el archivo deseado a descargar para desplegar un menu" ClickType="CLICK_SINGLE" DisplayName="click derecho en &quot;hoja de recursos&quot;" sap:VirtualizedContainerService.HintSize="797,148" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_RIGHT" SimulateClick="True">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximizar ventana" sap:VirtualizedContainerService.HintSize="794.4,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="se hace clic derecho en el archivo deseado a descargar para desplegar un menu" ClickType="CLICK_SINGLE" DisplayName="click derecho en &quot;hoja de recursos&quot;" sap:VirtualizedContainerService.HintSize="794.4,151.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_RIGHT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -138,7 +133,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:Click>
-            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Identificar menu emergente" sap:VirtualizedContainerService.HintSize="797,386" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="a98d62b9dbca21a4ca9228bae49de348" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Generación de Correos - Google Drive - Google Chrome' /&gt;&lt;ctrl name='Generación de Correos - Google Drive' role='document' /&gt;&lt;ctrl role='popup menu' /&gt;">
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Identificar menu emergente" sap:VirtualizedContainerService.HintSize="794.4,387.2" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="a98d62b9dbca21a4ca9228bae49de348" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Generación de Correos - Google Drive - Google Chrome' /&gt;&lt;ctrl name='Generación de Correos - Google Drive' role='document' /&gt;&lt;ctrl role='popup menu' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -181,13 +176,13 @@
                 </ActivityAction>
               </ui:WindowScope.Body>
             </ui:WindowScope>
-            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Identificar ventana emergente &quot;Guardar como&quot;" sap:VirtualizedContainerService.HintSize="797,1209" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="86e3282d264a8f85ce952f52ef56c377" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;">
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Identificar ventana emergente &quot;Guardar como&quot;" sap:VirtualizedContainerService.HintSize="794.4,1221.6" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="86e3282d264a8f85ce952f52ef56c377" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="476,1063" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="475.2,1074.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="DireccionDescarga" />
                     </Sequence.Variables>
@@ -209,20 +204,20 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Guardar como" sap:VirtualizedContainerService.HintSize="434,641" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6c271682-1ecc-41fd-a134-235efb037e9f" Version="V2">
+                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Guardar como" sap:VirtualizedContainerService.HintSize="433.6,648" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6c271682-1ecc-41fd-a134-235efb037e9f" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence sap2010:Annotation.AnnotationText="se escribe la ruta de descarga en la ventana emergente &quot;guardar como&quot;" DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,352" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <Sequence sap2010:Annotation.AnnotationText="se escribe la ruta de descarga en la ventana emergente &quot;guardar como&quot;" DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="375.2,356.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir ruta de descarga" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="6c271682-1ecc-41fd-a134-235efb037e9f" Text="[DireccionDescarga]" Version="V1">
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir ruta de descarga" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="6c271682-1ecc-41fd-a134-235efb037e9f" Text="[DireccionDescarga]" Version="V1">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable DesignTimeRectangle="136, 369, 514, 17" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="5e30d2a5-d2f6-4e3e-bb4d-4b2a6ab71c97" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAgYAAAAVCAYAAAA94ia8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVHhe7dZBEQAwEAOh+jedfm5WBajgDQDgiAEAEDEAACIGAEDEAACIGAAAEQMAIGIAAEQMAICIAQAQMQAAIgYAQMQAAIgYAAARAwAgYgAARAwAgIgBABAxAAAiBgBAxAAAONsHdtBX8Gofs+gAAAAASUVORK5CYII=" InformativeScreenshot="ea9127e6e15da6f213c2d2cfca7a055c.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
@@ -240,7 +235,7 @@
                         <uix:TargetApp Area="0, 0, 683, 480" FilePath="[DireccionDescarga]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ7SURBVDhPrZJdSFNhHMbfuwKDBgVJmG3KzLnmznESlLqdzbL8iPK+GCHRRYhehBdZrSSJhBoz02rTmYUVSEEfV+WWmQlZ7KaMiFzkchvmzvwI1HN2nt6zXhDDSx/48bxw/r+X98CfrHvCAqeZdhS74g5LOO4oBiMUEyz+qMBp2djaiQt7nHG7RYzZLYgKFsSEIoWKiNp4ZcrKK1Ern4hZuQY2vjrqhykbjzRWHr+sHIV2Ge0ysxIp5RCh50ipGZGSQifT/oXzH9V+3V8k0mE6aMYkZbq+DklPG2bvtCF5tRrJFh7iJU5JqrRyIkKchumE8P21vW2NAn6WFKZJ+joR/LKMMw//4JR/Ac9Cy0hN3oI8ykEaNdM20y50MZ0Qc9+RUInvMN5X0OfWVihPQ0uwXEhSxDRFlMD4MuRPTiobIb8rQGrUMMF0Qkx3axRTbw1OuhyYuXYFdd3z4M4nKCLrBBr7F5CaaIU0kgd5RK9II3ownRBjTzWM3VUw9lQpwQduNNyfx+7mGZiaEzCdo9A+4ZtD6nsL5Lc5FB3kYd3KBQZfZdjgPQSDtxLO500YHF9CwdkZxu90P/m4CHlsLxV3pJGGs0JMJyTfW+HKv30QKrsoN8b68PjDIo57Z3G6bw6vPi9h8psH0lAmYxtSbzL9TCdE6xY0+s4DIgX6Lgpt4d4xXB7uTNP0oh4/Xm6H9HorY4uIoGb1VuZ2CM7cm+VKbkc5VHI6HIqKeu4eyIMU1DA2IzWkWXsbte1Co67dLmo9AnQeO9Qu7doHKbAJciBDkQIZohzMWL2F/4f+jjbbbfPvdNtC2detyqOBLCpvCEuDGy/SZ69s3/qEkL8EQKZnbR9j4AAAAABJRU5ErkJggg==" InformativeScreenshot="9122e3acc9159d073f5ede8938a29435.png" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" />
                       </uix:NApplicationCard.TargetApp>
                     </uix:NApplicationCard>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="se da click en el boton &quot;guardar&quot; para comezar la descarga" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="click en el boton &quot;guardar&quot;" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="se da click en el boton &quot;guardar&quot; para comezar la descarga" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="click en el boton &quot;guardar&quot;" sap:VirtualizedContainerService.HintSize="433.6,151.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -271,9 +266,9 @@
                 </ActivityAction>
               </ui:WindowScope.Body>
             </ui:WindowScope>
-            <ui:UiElementExists sap2010:Annotation.AnnotationText="se verifica existe una señal que nos confirme si la descarga se realizo" DisplayName="Verificar si la descarga se hizo " Exists="[DownloadSuccess]" sap:VirtualizedContainerService.HintSize="797,148" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists sap2010:Annotation.AnnotationText="se verifica existe una señal que nos confirme si la descarga se realizo" DisplayName="Verificar si la descarga se hizo " Exists="[DownloadSuccess]" sap:VirtualizedContainerService.HintSize="794.4,151.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c9d34fb7-0f9c-4203-9c16-4bc6f0ec6497" InformativeScreenshot="62f92a6ecbc7e481e3e9142132ee3640" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Generación de Correos - Google Drive - Google Chrome' /&gt;&lt;ctrl name='Generación de Correos - Google Drive - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de descargas' role='grouping' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c9d34fb7-0f9c-4203-9c16-4bc6f0ec6497" InformativeScreenshot="62f92a6ecbc7e481e3e9142132ee3640" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Generación de Correos - Google Drive - Google Chrome' /&gt;&lt;ctrl name='Generación de Correos - Google Drive - Google Chrome - *' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de descargas' role='grouping' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -288,14 +283,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
-            <If sap2010:Annotation.AnnotationText="se verifica si la descarga se realizo" Condition="[DownloadSuccess = True]" DisplayName="Evaluar si la descarga se hizo " sap:VirtualizedContainerService.HintSize="797,371" sap2010:WorkflowViewState.IdRef="If_1">
+            <If sap2010:Annotation.AnnotationText="se verifica si la descarga se realizo" Condition="[DownloadSuccess = True]" DisplayName="Evaluar si la descarga se hizo " sap:VirtualizedContainerService.HintSize="794.4,438.4" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Descarga Realizada" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Descarga Realizada" sap:VirtualizedContainerService.HintSize="375.2,248" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="dt_nombre" />
                   </Sequence.Variables>
@@ -304,18 +299,19 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Descarga correcta&quot;]" />
+                  <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Descarga correcta&quot;]" />
+                  <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Descarga no realizada " sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence DisplayName="Descarga no realizada " sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;No se realizo la descarga&quot;]" />
+                  <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;No se realizo la descarga&quot;]" />
                 </Sequence>
               </If.Else>
             </If>
